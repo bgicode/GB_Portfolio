@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* CSS Document */
+@import 'fonts.css';
+
+*{
+	box-sizing: border-box;
+}
+
+html, body, iframe { height: 100%; }
+
+
+body{
+	font-family: "DINPro";
+	margin:0;
+	padding:0;
+	background: #989797;
+}
+
+div, table, nav {	
+	margin:1px;	
+}
+
+.mother_wrap{
+	width:60%;
+	margin:0 auto;
+	height: 100%;
+	padding:0;
+	border: none;	
+	
+	}
+#nav_block {
+	width: 250px;
+	margin: -1px 0 0 -1px;	
+	float: left;
+	background-color: black;
+	position: fixed;
+	
+}
+
+#laible {
+	width: 210px;
+	height: 210px;
+	margin: 44px auto;
+	background-image: url("ава.jpg");
+	background-size:cover;
+	border-radius: 150px;
+}
+
+nav{
+	margin: auto;
+	border: none;
+  width: 210px;
+	padding: 0;
+		
+}
+
+a {
+	text-decoration: none;
+	color: rgb(219, 219, 219);
+	transition: all 250ms;
+	padding: 3px 0 3px;
+
+	
+}
+
+nav ul{
+	list-style: none;	
+	margin-right: 0;
+	text-align: right;
+	padding: 0;
+	margin-top: 0px;
+	
+}
+
+nav ul li, .st {
+	font-size: 27px;
+	border-bottom: solid 1px #DFDFDF;		
+}
+
+.menu{
+	margin-bottom: 0px;	
+	border-top: solid 1px #DFDFDF;
+}
+
+.menu li {
+	font-size: 15px;
+	border: none;
+	
+}
+
+header{
+	width:70%;
+	height: 148px;	
+	float: right;
+	border: none;
+}
+
+#content_block{
+	margin: 0;	
+	float: right;
+	height:100%;
+	width:70%;
+	background-color: black;
+}
+
+h1, h2 {
+	 text-align: right;
+}
+
+hr{
+	margin-top: 20px;
+}
+
+iframe {
+	height: 100%;
+	width: 100%;
+	border: none;
+
+	
+}
+
+.menu{ 
+  display:none;
+}
+
+.hamburger-menu{
+	display: none;
+	margin-left: 0;
+}
+
+.menu__btn {
+  display: flex; 
+  align-items: center;  
+  position: relative;  
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+	margin-left: 0;
+}
+
+.menu__btn > span
+ {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(219, 219, 219);
+}
+
+#before 
+{ 
+  margin-top: 18px;
+}
+ #after
+{
+  margin-bottom: 18px;
+}
+
+#menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden; 
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;	
+  padding: 80px 0;
+ list-style: none;
+  text-align: center;
+  background-color: #000000;
+  box-shadow: 1px 0px 6px rgba(216, 216, 216, 0.2);
+}
+
+.menu__item {
+  display: block;
+  color: rgb(219, 219, 219);  
+  font-size: 27px;  
+  text-decoration: none;
+	text-align: right;
+	padding-right: 10px;
+}
+
+#menu_2 li a {
+	padding-right: 10px;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+	color: black;
+}
+
+a:hover {
+	background-color: rgb(105, 105, 105);
+}
+
+a:active {
+	background-color: rgb(219, 219, 219);
+	color: black;
+}
+
+
+.menu__btn > span
+ {
+  transition-duration: .25s;
+}
+#menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
+a{
+	display: block;
+}
+
+
+@media screen and (max-width: 1450px){
+	.mother_wrap {
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 940px) {
+	
+.header_wrapper {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: rgb(46, 46, 46);
+}
+
+	header{		
+		width: 90%;		
+		float: none;	
+		margin: auto;
+		display: flex;
+		
+		
+		
+	}
+	.header{
+		display: inline-block;
+		width: 1000px;
+		
+
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		line-height: 1rem;
+		color: rgb(219, 219, 219);
+		margin: 0;
+		margin-top: 5px;
+		margin-bottom: 20px;
+		
+	}
+
+	h2 {
+		font-size: 1rem;
+		line-height: 1rem;
+		color: rgb(219, 219, 219);
+		margin: 0;
+		
+	}
+
+	header {	
+		overflow: hidden;
+		height: 100px !important;
+	}
+	
+	.hamburger-menu {
+		display: block;
+	}
+	body {
+		background-color: rgb(0, 0, 0);
+	}
+
+  #nav_block {
+		display: none;
+	}
+
+	#laible {
+		display: none;
+	}
+
+	#content_block{		
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+		float: none;
+		margin-top: 100px;		
+	}
+
+	
+
+	
+	
+	.mother_wrap {
+		width: 100%;
+		
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	
+	
+		h1 {
+			font-size: 1rem;
+			line-height: 1rem;
+			color: rgb(219, 219, 219);
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
+	
+		h2 {
+			font-size: 0.8rem;
+			line-height: 1rem;
+			color: rgb(219, 219, 219);
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
+
+		header {			
+			overflow: hidden;
+			height: 70px !important;
+		}
+
+		#content_block{
+			margin-top: 75px;
+			width: 95%;
+		}
+	}

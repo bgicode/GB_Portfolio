@@ -1,0 +1,129 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Галимарданов Булат: Графический дизайн, 3D дизайн, Web дизайн">
+<meta name="keywords" content="Портфолио, Графический дизайн, дизайн, design, web, полиграфия, брендинг, 3D, 3Д">
+<meta name="robots" content="none">
+<meta name="Author" content="Галимарданов Булат">
+<!-- <meta http-equiv="refresh" content="5; url=index.html">  -->
+<meta property="og:locale" content="ru-RU">
+<meta property="og:type" content="website"> 
+<meta property="og:url" content="#">
+<meta property="og:description" content="Меня зовут Галимарданов Булат, я занимаюсь графическим, web и 3D дизайном. Здесь представленно моё порфолио">
+<meta property="og:image" content="url=ава.jpg">
+<meta property="og:image:width" content="850">
+<meta property="og:image:height" content="450">
+<meta property="og:image:type" content="image/png">   
+<meta property="og:title" content="Порфолио. Галимарданов Булат, графический дизайнер"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" >	
+<title>GB portfolio</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+		var x = 1;
+		function MenuNone(){
+			document.getElementById('menu').style = "	display: none;";
+					 
+		}
+		function MenuBlock(){
+			document.getElementById('menu').style = "	display: block";
+					 
+		}
+
+		function MenuNone2(){
+			document.getElementById('menu_2').style = "	display: none;";
+					 
+		}
+		function MenuBlock2(){
+			document.getElementById('menu_2').style = "	display: block";
+					 
+		}
+		function menu(){			
+			++x;			
+			if( x % 2 === 0) {
+				document.getElementById("menu__box").style = "visibility: visible; left: 0;";
+				document.querySelector(".menu__btn > #center").style = "transform: rotate(45deg);";
+				document.querySelector(".menu__btn > #before").style = "margin-top: 0; transform: rotate(135deg);";
+				document.querySelector(".menu__btn > #after").style = "margin-bottom: 0; transform: rotate(135deg);";
+     }else{
+			document.getElementById("menu__box").style = "visibility: hidden; left: -100%;";
+			document.querySelector(".menu__btn > #center").style = "transform: rotate(0);";
+			document.querySelector(".menu__btn > #before").style = "margin-top: 18px; transform: rotate(0);";
+			document.querySelector(".menu__btn > #after").style = "margin-bottom: 18px; transform: rotate(0);";
+     }
+		}
+
+	</script>
+</head>
+
+<body>	
+	<div class="mother_wrap" >
+		<div class="header_wrapper">
+		<header class="clearfix">
+			<nav class="hamburger-menu">				
+				<div class="menu__btn burger" onClick="menu()">
+					<span id="before"></span>
+					<span id="center"></span>
+					<span id="after"></span>
+				</div>
+				<ul id="menu__box">
+					<li><a class="menu__item" href="All_window1.html" target="window1" onClick="MenuBlock2()">ПОРТФОЛИО</a>
+						<ul id="menu_2" class="menu">
+							<li id="punkt"><a href="All_window1.html" target="window1" onClick="menu()">ВСЁ</a></li>
+							<li><a href="Art_Window2.html" target="window1" onClick="menu()">АРТ ДИЗАЙН</a></li>
+							<li><a href="3D_window3.html" target="window1" onClick="menu()">3D</a></li>
+							<li><a href="Logo_Window4.html" target="window1" onClick="menu()">ЛОГОТИПЫ</a></li>
+							<li><a href="Poligraf_Window5.html" target="window1" onClick="menu()">ПОЛИГРАФИЯ</a></li>
+							<li><a href="Web_window6.html" target="window1" onClick="menu()">WEB</a></li>
+						</ul>
+					</li>
+					<li><a class="menu__item" href="resume.html" target="window1" onClick="MenuNone2(); menu()" >РЕЗЮМЕ</a></li>
+					<li><a class="menu__item" href="Контакты.html" target="window1" onClick="MenuNone2(); menu()">КОНТАКТЫ</a></li>
+					<li><a class="menu__item" href="Feedback.html" target="window1" onClick="MenuNone2(); menu()">НАПИСАТЬ</a></li>			
+				</ul>
+			</nav>
+			<div class="header">
+			<hr color="#FFFFFF">
+			<h1>Галимарданов Булат</h1>
+			<h2>графический дизайнер</h2>
+			</div>
+		</div>
+		</header>
+		<div id="nav_block" class="clearfix">
+			<div id="laible"></div>
+			<nav>
+				<ul>
+					<li><a href="All_window1.html" target="window1" onClick="MenuBlock()">ПОРТФОЛИО</a>					
+						<ul id="menu" class="menu">
+							<li id="punkt"><a href="All_window1.html" target="window1">ВСЁ</a></li>
+							<li><a href="Art_Window2.html" target="window1">АРТ ДИЗАЙН</a></li>
+							<li><a href="3D_window3.html" target="window1">3D</a></li>
+							<li><a href="Logo_Window4.html" target="window1">ЛОГОТИПЫ</a></li>
+							<li><a href="Poligraf_Window5.html" target="window1">ПОЛИГРАФИЯ</a></li>
+							<li><a href="Web_window6.html" target="window1">WEB</a></li>
+						</ul>
+					</li>				
+					<li><a  href="resume.html" target="window1" onClick="MenuNone()">РЕЗЮМЕ</a></li>
+					<li><a  href="Контакты.html" target="window1" onClick="MenuNone()">КОНТАКТЫ</a></li>
+					<li><a  href="Feedback.html" target="window1" onClick="MenuNone()">НАПИСАТЬ</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div id="content_block">			
+			<iframe id="myiframe" src="All_window1.html" name="window1" >
+			</iframe>	
+		</div>
+	</div>
+
+<script src="./iframeResizer.min.js"></script>
+<script>
+	iFrameResize({ log: true }, '#myiframe')//решение найденное в интернете позволяющий высоту iframe динамичной
+</script>
+	
+</body>
+
+</html>

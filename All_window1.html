@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script language="JavaScript">		
+	function uncheckAllRadio(radio){
+  var obj = document.getElementsByName(radio);
+  for(i=0; i<obj.length; i++)
+  obj[i].checked = false;
+}
+	 
+</script>
+<style type="text/css">
+
+@import 'fonts.css';		
+
+body{
+	background-color: black;
+	font-family: "DINPro";
+	padding: 10px;
+}
+		
+#cont_units {
+	margin:auto;
+	width:100%;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+	padding: 0;
+	box-sizing: border-box;		
+}
+	
+span{
+	color: rgb(219, 219, 219);		  
+	width:619px;	  
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	}
+
+.unit {	
+	margin: 2px;
+	width: 20%;
+	height: 150px;
+	flex-grow: 1;
+	transition-duration: 250ms;	
+}
+
+label{
+	display: flex;	
+	color: rgb(219, 219, 219);	
+	background-size: cover;	
+	background-repeat: no-repeat;
+	background-position: center center;	
+	cursor: pointer;
+}
+
+
+img {	
+	margin: auto;
+	height: 100%;
+	object-fit: cover;
+	display: none;
+	cursor: auto;	
+	
+}	
+
+.cleaner_X {
+	background-image: url(img/Close.svg);
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	display: none;
+	top: -25px;
+	right: 3px;
+	cursor: pointer;
+	
+}
+
+.clener{
+	opacity: 0;
+	cursor: pointer;
+}
+
+.radio{
+	opacity: 0;
+	margin-right: 0;
+	position: absolute;
+	right: 10px;
+}
+
+.unit:hover {	
+	box-shadow: 0 0 23px rgba(255,255,255,0.7);
+	background-size:auto 120%;			
+}
+
+.radio:checked + .unit {
+	width: 100%;
+	height: auto;
+	flex-grow: 6;
+	position: absolute;			
+	margin-left: 0;
+	box-shadow: 0 0 17px rgba(255,255,255,0.5);
+	color: rgb(219, 219, 219);			
+}
+
+.radio:checked + .unit:hover{
+	transform: none;			
+}
+
+.radio:checked + .unit > img {
+	width: 100%;
+	display: inline;			
+}
+
+.radio:checked + .unit > .cleaner_X {			
+	display: block;			
+}
+
+@media screen and (max-width:400px) {
+	.unit {
+		width: 25%;
+		height: 100px;
+ }
+	.none_400{
+		display: none;
+	}
+}
+
+@media screen and (max-width:600px) {
+	.unit {				
+		height: 100px;
+	}
+}		
+		
+	</style>
+<title>окно1</title>
+</head>
+
+<body>	
+	<div id="title"><span>ПОРТФОЛИО > ВСЁ</span></div>
+	<div  id="cont_units">
+
+		<input class="radio" id="radio-1" type="radio" name="radio" value="0">
+		<label class="unit none_tranceform" for="radio-1" style="background-image: url(img/эх_не_умрёт_метал_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/эх_не_умрёт_метал_БОЛ.jpg" alt="эх_не_умрёт_метал">
+		</label>
+	
+	
+		<input class="radio" id="radio-2" type="radio" name="radio" value="1">
+		<label class="unit none_tranceform" for="radio-2" style="background-image: url(img/Фламинго_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Фламинго_БОЛ.jpg" alt="">
+		</label>
+
+			
+		<input class="radio" id="radio-3" type="radio" name="radio" value="2">
+		<label class="unit none_tranceform" for="radio-3" style="background-image: url(img/темаркт_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/темаркт_БОЛ.jpg" alt="">
+		</label>
+
+					
+		<input class="radio" id="radio-4" type="radio" name="radio" value="3">
+		<label class="unit none_tranceform" for="radio-4" style="background-image: url(img/стенд_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/стенд_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-5" type="radio" name="radio" value="4">
+		<label class="unit none_tranceform" for="radio-5" style="background-image: url(img/Соколов_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Соколов_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-6" type="radio" name="radio" value="5">
+		<label class="unit none_tranceform" for="radio-6" style="background-image: url(img/Сертификат_2_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Сертификат_2_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-7" type="radio" name="radio" value="6">
+		<label class="unit none_tranceform" for="radio-7" style="background-image: url(img/Сертификат_1_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Сертификат_1_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-8" type="radio" name="radio" value="7">
+		<label class="unit none_tranceform" for="radio-8" style="background-image: url(img/рука_3Д_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/рука_3Д_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-9" type="radio" name="radio" value="8">
+		<label class="unit none_tranceform" for="radio-9" style="background-image: url(img/путешест_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/путешест_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-10" type="radio" name="radio" value="9">
+		<label class="unit none_tranceform" for="radio-10" style="background-image: url(img/Прайс_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Прайс_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-11" type="radio" name="radio" value="10">
+		<label class="unit none_tranceform" for="radio-11" style="background-image: url(img/Нордини_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Нордини_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-12" type="radio" name="radio" value="11">
+		<label class="unit none_tranceform" for="radio-12" style="background-image: url(img/Ника_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Ника_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-13" type="radio" name="radio" value="12">
+		<label class="unit none_tranceform" for="radio-13" style="background-image: url(img/меню_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/меню_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-14" type="radio" name="radio" value="13">
+		<label class="unit none_tranceform" for="radio-14" style="background-image: url(img/Мастерская_экспер_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Мастерская_экспер_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-15" type="radio" name="radio" value="14">
+		<label class="unit none_tranceform" for="radio-15" style="background-image: url(img/Интерьерная_вывеска_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Интерьерная_вывеска_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-16" type="radio" name="radio" value="15">
+		<label class="unit none_tranceform" for="radio-16" style="background-image: url(img/демон_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/демон_бол.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-17" type="radio" name="radio" value="16">
+		<label class="unit none_tranceform" for="radio-17" style="background-image: url(img/ГМО_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/ГМО_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-18" type="radio" name="radio" value="17">
+		<label class="unit none_tranceform" for="radio-18" style="background-image: url(img/Главобтог_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Главобтог_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-19" type="radio" name="radio" value="18">
+		<label class="unit none_tranceform" for="radio-19" style="background-image: url(img/Вода_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Вода_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-20" type="radio" name="radio" value="19">
+		<label class="unit none_tranceform" for="radio-20" style="background-image: url(img/весёлый_шарик_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/весёлый_шарик_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-21" type="radio" name="radio" value="20">
+		<label class="unit none_tranceform" for="radio-21" style="background-image: url(img/В2В-МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/В2В-БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-22" type="radio" name="radio" value="21">
+		<label class="unit none_tranceform" for="radio-22" style="background-image: url(img/Берега_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Берега_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-23" type="radio" name="radio" value="22">
+		<label class="unit none_tranceform" for="radio-23" style="background-image: url(img/SV_GROUP_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/SV_GROUP_БОЛ .jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-24" type="radio" name="radio" value="23">
+		<label class="unit none_tranceform" for="radio-24" style="background-image: url(img/OVERender_сайт_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/OVERender_сайт_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-25" type="radio" name="radio" value="24">
+		<label class="unit none_tranceform" for="radio-25" style="background-image: url(img/OVERender_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/OVERender_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-26" type="radio" name="radio" value="25">
+		<label class="unit none_tranceform" for="radio-26" style="background-image: url(img/JF_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/JF_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-27" type="radio" name="radio" value="26">
+		<label class="unit none_tranceform" for="radio-27" style="background-image: url(img/Grandence_МАЛ.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Grandence_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-28" type="radio" name="radio" value="27">
+		<label class="unit none_tranceform" for="radio-28" style="background-image: url(img/Expoten_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/Expoten_БОЛ.jpg" alt="">
+		</label>
+
+		<input class="radio" id="radio-29" type="radio" name="radio" value="28">
+		<label class="unit none_tranceform" for="radio-29" style="background-image: url(img/CityCoffe_мал.jpg);">
+			<div class="cleaner_X">
+				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
+			</div>				
+			<img src="img/CityCoffe_БОЛ.jpg" alt="">
+		</label>
+		
+		<div class="unit"></div>
+		<div class="unit none_400"></div>
+		<div class="unit none_400"></div>
+	</div>
+	<script src="./iframeResizer.contentWindow.min.js">
+		//решение найденное в интернете позволяющий высоту iframe динамичной
+	</script> 
+	
+</body>
+</html>
