@@ -18,10 +18,15 @@
 			text-align: center;
 		}
 
+		body{
+			background-color: black;
+		}
+
 		.form_wraper {
 			width: 70%;
 			margin: auto;
 			padding-bottom: 20px;
+			background-color: black;
 		}
 
 		input, textarea {			
@@ -102,17 +107,19 @@
 	</style>
 </head>
 <body>
-	<div class="form_wraper">
-		<form class="form" name="feedback" method="POST" action="sandmail.php">
-			<div class="caption"><h1>Обратная связь</h1></div>			
-			<div class="form_title">Ваше имя</div>
-			<input type="text" name="name" required="required">
-			<div  class="form_title">Ваш email</div>
-			<input type="email" name="email" required="required">
-			<div  class="form_title">Сообщение</div>
-			<textarea name="message"></textarea>
-			<input class="submit_btn" type="submit" name="submit_btn" value="Отправить">
-		</form>
+	<div class="wrap">
+		<div class="form_wraper">
+			<form class="form" name="feedback" method="POST" action="sandmail.php">
+				<div class="caption"><h1>Обратная связь</h1></div>			
+				<div class="form_title">Ваше имя</div>
+				<input type="text" name="name" required="required">
+				<div  class="form_title">Ваш email</div>
+				<input type="email" name="email" required="required">
+				<div  class="form_title">Сообщение</div>
+				<textarea name="message"></textarea>
+				<input class="submit_btn" type="submit" name="submit_btn" value="Отправить">
+			</form>
+		</div>
 	</div>
 	<script src="./iframeResizer.contentWindow.min.js">
 		//решение найденное в интернете позволяющий высоту iframe динамичной
