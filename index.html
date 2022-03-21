@@ -11,7 +11,7 @@
 <meta property="og:type" content="website"> 
 <meta property="og:url" content="#">
 <meta property="og:description" content="Меня зовут Галимарданов Булат, я занимаюсь графическим, web и 3D дизайном. Здесь представленно моё порфолио">
-<meta property="og:image" content="url=ава.jpg">
+<meta property="og:image" content="url=img/ava.jpg">
 <meta property="og:image:width" content="850">
 <meta property="og:image:height" content="450">
 <meta property="og:image:type" content="image/png">   
@@ -21,44 +21,8 @@
 <link rel="stylesheet" type="text/css" href="style.css" >	
 <title>GB portfolio</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript">
-
-		var x = 1;
-		function MenuNone(){
-			document.getElementById('menu').style = "	display: none;";
-					 
-		}
-		function MenuBlock(){
-			document.getElementById('menu').style = "	display: block";
-					 
-		}
-
-		function MenuNone2(){
-			document.getElementById('menu_2').style = "	display: none;";
-					 
-		}
-		function MenuBlock2(){
-			document.getElementById('menu_2').style = "	display: block";
-					 
-		}
-		function menu(){			
-			++x;			
-			if( x % 2 === 0) {
-				document.getElementById("menu__box").style = "visibility: visible; left: 0;";
-				document.querySelector(".menu__btn > #center").style = "transform: rotate(45deg);";
-				document.querySelector(".menu__btn > #before").style = "margin-top: 0; transform: rotate(135deg);";
-				document.querySelector(".menu__btn > #after").style = "margin-bottom: 0; transform: rotate(135deg);";
-     }else{
-			document.getElementById("menu__box").style = "visibility: hidden; left: -100%;";
-			document.querySelector(".menu__btn > #center").style = "transform: rotate(0);";
-			document.querySelector(".menu__btn > #before").style = "margin-top: 18px; transform: rotate(0);";
-			document.querySelector(".menu__btn > #after").style = "margin-bottom: 18px; transform: rotate(0);";
-     }
-		}
-
-	</script>
+<script src="./main.js" type="text/javascript"></script>
 </head>
-
 <body>	
 	<div class="mother_wrap" >
 		<div class="header_wrapper">
@@ -81,7 +45,7 @@
 						</ul>
 					</li>
 					<li><a class="menu__item" href="about.html" target="window1" onClick="MenuNone2(); menu()" >ОБО МНЕ</a></li>
-					<li><a class="menu__item" href="Контакты.html" target="window1" onClick="MenuNone2(); menu()">КОНТАКТЫ</a></li>
+					<li><a class="menu__item" href="Contacts.html" target="window1" onClick="MenuNone2(); menu()">КОНТАКТЫ</a></li>
 					<li><a class="menu__item" href="Feedback.html" target="window1" onClick="MenuNone2(); menu()">НАПИСАТЬ</a></li>			
 				</ul>
 			</nav>
@@ -96,7 +60,7 @@
 			<div id="laible"></div>
 			<nav>
 				<ul>
-					<li><a href="All_window1.html" target="window1" onClick="MenuBlock()">ПОРТФОЛИО</a>					
+					<li><a href="All_window1.html" target="window1" onClick="MenuBlock(); bgAnimation()">ПОРТФОЛИО</a>					
 						<ul id="menu" class="menu">
 							<li id="punkt"><a href="All_window1.html" target="window1">ВСЁ</a></li>
 							<li><a href="Art_Window2.html" target="window1">АРТ ДИЗАЙН</a></li>
@@ -106,9 +70,9 @@
 							<li><a href="Web_window6.html" target="window1">WEB</a></li>
 						</ul>
 					</li>				
-					<li><a  href="about.html" target="window1" onClick="MenuNone()">ОБО МНЕ</a></li>
-					<li><a  href="Контакты.html" target="window1" onClick="MenuNone()">КОНТАКТЫ</a></li>
-					<li><a  href="Feedback.html" target="window1" onClick="MenuNone()">НАПИСАТЬ</a></li>
+					<li><a  href="about.html" target="window1" onClick="MenuNone(); bgAnimation()">ОБО МНЕ</a></li>
+					<li><a  href="Contacts.html" target="window1" onClick="MenuNone(); bgAnimation()">КОНТАКТЫ</a></li>
+					<li><a  href="Feedback.html" target="window1" onClick="MenuNone(); bgAnimation()">НАПИСАТЬ</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -116,8 +80,26 @@
 		<div id="content_block">			
 			<iframe id="myiframe" src="All_window1.html" name="window1" >
 			</iframe>	
-		</div>
+		</div>	
 	</div>
+	<div class="bg_deco_wrap">
+		<div class="bg_deco_fixed">
+			<div class="bg_deco bg_deco_1"></div>
+			<div class="bg_deco bg_deco_2"></div>
+			<div class="bg_deco bg_deco_3"></div>
+			<div class="bg_deco bg_deco_4"></div>
+			<div class="bg_deco bg_deco_5"></div>
+			<div class="bg_deco bg_deco_6"></div>
+			<div class="bg_deco bg_deco_7"></div>
+			<div class="bg_deco bg_deco_8"></div>
+			<div class="bg_deco bg_deco_9"></div>
+			<div class="bg_deco bg_deco_10"></div>
+			<div class="bg_deco bg_deco_11"></div>
+			<div class="bg_deco bg_deco_12"></div>
+		</div>
+		
+	</div>
+		
 
 <script src="./iframeResizer.min.js"></script>
 <script>
