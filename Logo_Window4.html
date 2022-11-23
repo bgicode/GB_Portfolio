@@ -4,14 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script language="JavaScript">		
-	function uncheckAllRadio(radio){
-  var obj = document.getElementsByName(radio);
-  for(i=0; i<obj.length; i++)
-    obj[i].checked = false;
-  }
-	 
-	</script>
+<script src="./openIMG.js" type="text/javascript"></script>
 	<style type="text/css">
 
 @import 'fonts.css';
@@ -98,7 +91,8 @@ img {
 
 .unit:hover {	
 	box-shadow: 0 0 23px rgba(255,255,255,0.7);
-	background-size: 120%;			
+	/* background-size: 120%;			 */
+	transform: scale(1.1, 1.1);
 }
 
 
@@ -109,7 +103,8 @@ img {
 	position: absolute;			
 	margin-left: 0;
 	box-shadow: 0 0 17px rgba(255,255,255,0.5);
-	color: rgb(219, 219, 219);			
+	color: rgb(219, 219, 219);	
+	z-index: 3;		
 }
 
 .radio:checked + .unit:hover{

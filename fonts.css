@@ -6,3 +6,8 @@
     src: url('fonts/DINPro.woff') format('woff'),
         url('fonts/DINPro.woff2') format('woff2');
 }
+
+@font-face {
+	font-family: 'Concepto';
+	src: url('fonts/CONC.woff2') format('woff2');
+}
