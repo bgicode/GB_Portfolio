@@ -38,9 +38,7 @@ hr{
 	background-color: #000000;
 }
 
-div, table, nav {	
-	margin:1px;	
-}
+
 
 
 /* background decoration */
@@ -63,8 +61,7 @@ div, table, nav {
 	transform: rotate(45deg) skew(45deg) translate(0, 0);	
 	background: linear-gradient(315deg, rgba(130, 130, 130, 1) 56%, rgba(253, 253, 253, 0));		
 	margin-bottom: 50px;
-	transform-origin: top left;
-	
+	transform-origin: top left;	
 	
 }
 
@@ -155,8 +152,6 @@ div, table, nav {
 	background: #ffffff;
 }
 
-
-
 /* background decoration */
 
 
@@ -166,12 +161,9 @@ div, table, nav {
 	height: 100%;
 	padding:0;
 	border: none;
-	z-index: 2 !important;
-	
-
-		
-	
+	z-index: 2 !important;	
 	}
+
 #nav_block {
 	width: 250px;
 	margin: -1px 0 0 -1px;	
@@ -195,8 +187,7 @@ nav{
 	margin: auto;
 	border: none;
   width: 210px;
-	padding: 0;
-		
+	padding: 0;		
 }
 
 a {
@@ -204,9 +195,6 @@ a {
 	color: rgb(219, 219, 219);
 	transition: all 250ms;
 	padding: 3px 0 3px;
-	
-	
-
 }
 
 nav ul{
@@ -214,8 +202,7 @@ nav ul{
 	margin-right: 0;
 	text-align: right;
 	padding: 0;
-	margin-top: 0px;
-	
+	margin-top: 0px;	
 }
 
 nav ul li, .st {
@@ -223,82 +210,6 @@ nav ul li, .st {
 	border-bottom: solid 1px #DFDFDF;		
 }
 
-.wrap_dounload{
-	display: inline-block;
-	height: 27px;
-	width: 27px;
-	overflow: hidden;	
-	margin-bottom: -5px;
-	
-	
-}
-
-.dounload {	
-	height: 22px;
-	width: 22px;	
-	background-image: url("img/dounload.png");
-	background-repeat: no-repeat;
-	background-size: contain;	
-	background-position: right ;		
-	transition: 1s;
-	
-	
-	
-	
-	
-}
-
-
-
-a:hover .dounload{	
-  -webkit-animation: card-shift 2s ease-in-out infinite;
-  animation: card-shift 2s ease-in-out infinite;
-  animation-timing-function: step-start;
-  z-index: -3;
- /* height: 600px; */
-  top: 0px;
-  left:0;
-  right: 0;
-  bottom: 0;
-	
-	
-
-}
-
-@-webkit-keyframes card-shift {
-	0% {
-		-webkit-transform:translate3d(0,0,0);
-		transform:translate3d(0,0,0)
-	 }
-	 
-	 50% {
-		-webkit-transform:translate3d(0,30px,0);
-		transform:translate3d(0,30px,0)
-	 }	
-	 100% {
-		-webkit-transform:translate3d(0,0,0);
-		transform:translate3d(0,0,0);
-		
-		
-	 }	  
-	 
- }
- @keyframes card-shift {
-	0% {
-		-webkit-transform:translate3d(0,0,0);
-		transform:translate3d(0,0,0)
-	 }
-	 
-	 50% {
-		-webkit-transform:translate3d(0,30px,0);
-		transform:translate3d(0,30px,0)
-	 }	
-	 100% {
-		-webkit-transform:translate3d(0,0,0);
-		transform:translate3d(0,0,0);
-		
-	 }	  
- }
 
 .menu{
 	margin-bottom: 0px;	
@@ -532,6 +443,11 @@ body {
 
 	hr{
 		background-color: rgb(219, 219, 219);
+	}
+
+	.unit:hover {	
+		box-shadow: none;	
+		transform: none;
 	}
 
 }

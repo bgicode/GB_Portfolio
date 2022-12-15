@@ -72,7 +72,7 @@ echo "<!DOCTYPE html>
 </style>
 </head>
 <body>
-<h1>"
+<h1 class='massage'>"
 ?> 
 <?php echo implode(["result" => $result, "status" => $status]);"</h1>
 <script src='./iframeResizer.contentWindow.min.js'>		

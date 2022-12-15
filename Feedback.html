@@ -5,108 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
-<style>
-
-		@import 'fonts.css';
-
-		*{			
-			color: rgb(219, 219, 219);
-			font-family: "DINPro";
-		}
-
-		h1{
-			text-align: center;
-		}
-
-		body{
-			background-color: black;
-		}
-
-		.form_wraper {
-			width: 70%;
-			margin: auto;
-			padding-bottom: 20px;
-			background-color: black;
-		}
-
-		input, textarea {			
-			border: solid 1px rgb(219, 219, 219);
-			background-color: black;
-		}
-
-		input, textarea {
-			width: 100%;			
-		}
-
-		.form_title {
-			margin-bottom: 5px;
-			margin-top: 10px;
-		}
-
-		input {
-			height: 30px;
-			width: 50%;
-			transition:all 250ms;
-		}
-
-		.submit_btn {
-			height: 40px;
-			border: none;
-			background-color: rgb(63, 63, 63);
-			font-size: 1.2rem;
-			cursor: pointer;	
-			margin-bottom: 20px;	
-		}
-
-		textarea {
-			height: 300px;
-			margin-bottom: 10px;
-						
-		}
-		
-		input, textarea, .form_title {
-			display: block;			
-		}
-
-		input:hover{
-			box-shadow: 0 0 17px rgba(255,255,255,0.5);
-		}
-
-		.submit_btn:hover{
-			border: solid 1px rgb(219, 219, 219);
-			background-color: rgb(105, 105, 105);
-		}
-
-		.submit_btn:active {
-			background-color: rgb(219, 219, 219);
-			color: black;
-		}
-
-
-		@media screen and (max-width:600px) {
-			.form_wraper {
-			width: 90%;						
-			}
-			input{
-				width: 70%;
-			}
-		}	
-
-		@media screen and (max-width:400px) {
-			.form_wraper {
-			width: 90%;						
-			}
-			input{
-				width: 100%;
-			}
-
-			h1{
-				font-size: 1.5rem;
-			}
-		}		
-	</style>
+<link rel="stylesheet" type="text/css" href="frames.css" >
 </head>
-<body>
+<body class="bodyFeed">
 	<div class="wrap">
 		<div class="form_wraper">
 			<form class="form" name="feedback" method="POST" action="sandmail.php">
@@ -124,33 +25,6 @@
 	<script src="./iframeResizer.contentWindow.min.js">
 		//решение найденное в интернете позволяющий высоту iframe динамичной
 	</script> 
-	<script>
-		// Отправка данных на сервер
-		function send(event, php){
-		console.log("Отправка запроса");
-		event.preventDefault ? event.preventDefault() : event.returnValue = false;
-		var req = new XMLHttpRequest();
-		req.open('POST', php, true);
-		req.onload = function() {
-			if (req.status >= 200 && req.status < 400) {
-			json = JSON.parse(this.response); // Ебанный internet explorer 11
-					console.log(json);
-						
-					// ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-					if (json.result == "success") {
-						// Если сообщение отправлено
-						alert("Сообщение отправлено");
-					} else {
-						// Если произошла ошибка
-						alert("Ошибка. Сообщение не отправлено");
-					}
-				// Если не удалось связаться с php файлом
-				} else {alert("Ошибка сервера. Номер: "+req.status);}}; 
-		
-		// Если не удалось отправить запрос. Стоит блок на хостинге
-		req.onerror = function() {alert("Ошибка отправки запроса");};
-		req.send(new FormData(event.target));
-		}
-		</script>
+	
 </body>
 </html>

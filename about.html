@@ -4,87 +4,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style type="text/css">
-	@import 'fonts.css';
-	body{
-		background-color: black;
-		font-family: "DINPro";
-		padding-bottom: 20px;
-	}
-		
-		
-	p, h2, table {
-		color: rgb(219, 219, 219);
-		text-align: center;
-		font-size: 20px;
-	}
-		
-	#about {
-		font-size: 27px;
-		margin-top: 100px;
-		margin-bottom: 50px;
-	}		
-		
-	.text {		
-		text-align: justify;
-		line-height: 2rem;
-		width: 80%;
-		margin: 0 auto 5rem;
-	}
-
-	.box {
-  position: relative;
-  width: 40%;
-  margin: 1rem auto 2rem;  
-  border: 2px white solid;
-	border-radius: 100%;
-	background-image: url(img/photo.jpg);
-	background-size: cover;
-	}
-
-	.box:before {
-  content: "";
-  display: block;
-  margin-top: 100%; 
-}
-
-table{
-	width: 80%;
-	margin-bottom: 200px;
-	margin-right: auto;
-	margin-left: auto;
-	font-size: 17px;	
-	margin-top: 50px;
-}
-
-td {
-	width: calc(100%/3);
-	padding: 0.7rem;
-}
-
-img {
-	margin-top: 5px;
-	margin-bottom: 2px;
-}
-
-
-	@media screen and (max-width:600px) {		
-		.box {
-			width: 60%;
-		}
-
-		.text, table{
-			width: 100%;
-		}
-
-
-	}				
-		
-	</style>
+<link rel="stylesheet" type="text/css" href="frames.css" >
 <title>окно1</title>
 </head>
 
-<body>	
+<body class="bodyAbout">	
 	<p id="about">ОБО МНЕ</p>
 	<div class="box">
 		<div class="photo"></div>
@@ -101,7 +25,7 @@ img {
 		&nbsp;&nbsp;Создание сайтов — это моё самое любимое творчество.
 		Я изготавливаю сайты которые разрабатываю сайты используя современные технологии (HTML, CSS, JS, PHP)
 	</p>
-	<h2>Стек технологий:</h2>	
+	<h2 class="title_tech">Стек технологий:</h2>	
 	<table>
 		<tr>
 			<td>
