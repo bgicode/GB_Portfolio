@@ -1,8 +1,10 @@
-var x = 1;
-var y = 1;
+
+// @media 940 _______________________________
 
 let stor1 = 1;
 let stor2 = 2;
+
+
 
 if(matchMedia){
 	var screen = window.matchMedia("(max-width: 940px)");
@@ -12,13 +14,20 @@ if(matchMedia){
 
 function changes(screen){
 	if (screen.matches) {
-		localStorage.setItem('stor', stor1);
+		localStorage.setItem('stor', stor1);	
+		
 	}
 	else{
 		localStorage.setItem('stor', stor2);
+		
 	}
 }
 
+// @media 940 ________________________________________________________
+
+// desktop and mobyle menu hiding______________________________________________________
+
+var x = 1;
 
 		function MenuNone(){
 			document.getElementById('menu').style = "	display: none;";
@@ -56,6 +65,11 @@ function changes(screen){
      }
 		}
 
+// desktop and mobyle menu hiding______________________________________________________
+
+
+// bg animation_____________________________________________________________________________
+		var y = 1;
 		function bgAnimation(){
 			let BgDecoAnim = document.querySelectorAll(".bg_deco");
 			++y;			
@@ -88,6 +102,10 @@ function changes(screen){
      }
 		}
 
+// bg animation_____________________________________________________________________________
+
+// scrol autoback______________________________________________________________________
+
 		function smoothscroll(){
 			let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
 			if (currentScroll > 0) {
@@ -95,3 +113,11 @@ function changes(screen){
 					 window.scrollTo (0,currentScroll - (currentScroll/5));
 			}
 	}
+
+// scrol autoback______________________________________________________________________
+
+
+	window.addEventListener('storage', function(){				
+			console.log(localStorage.getItem('stor2'));
+		 }
+		 );

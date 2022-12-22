@@ -10,6 +10,8 @@
 html, body, iframe { height: 100%; }
 
 
+
+
 body{
 	font-family: "DINPro";
 	margin:0;
@@ -222,7 +224,7 @@ nav ul li, .st {
 	
 }
 
-header{
+.header_visible{
 	width:70%;
 	height: 148px;	
 	float: right;
@@ -371,19 +373,28 @@ body {
 	display: none;
 }
 
-.header_wrapper {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	background-color: rgb(46, 46, 46);
-}
 
-	header{		
-		width: 90%;		
+
+.header_visible{			
 		float: none;	
 		margin: auto;
-		display: flex;		
+		display: flex;
+			
+		padding-left: 5%;
+		padding-right: 5%;
+			
+		position: fixed;
+		width: 100%;
+		top: 0;
+		background-color: rgb(46, 46, 46);
+		transition: transform .1s linear;
 	}
+
+	.header_visible.hide {
+		transform: translateY(-100px);
+	}
+
+	
 
 	.header{
 		display: inline-block;
@@ -408,7 +419,7 @@ body {
 		
 	}
 
-	header {	
+	.header_visible {	
 		overflow: hidden;
 		height: 100px !important;
 	}
@@ -471,7 +482,7 @@ body {
 			margin-bottom: 3px;
 		}
 
-		header {			
+		.header_visible {			
 			overflow: hidden;
 			height: 70px !important;
 		}
