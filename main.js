@@ -1,9 +1,6 @@
 
 // @media 940 _______________________________
 
-let stor1 = 1;
-let stor2 = 2;
-
 
 
 if(matchMedia){
@@ -14,11 +11,11 @@ if(matchMedia){
 
 function changes(screen){
 	if (screen.matches) {
-		localStorage.setItem('stor', stor1);	
+		localStorage.setItem('stor', 1);	
 		
 	}
 	else{
-		localStorage.setItem('stor', stor2);
+		localStorage.setItem('stor', 2);
 		
 	}
 }
@@ -46,6 +43,9 @@ var x = 1;
 			document.getElementById('menu_2').style = "	display: block";
 					 
 		}
+
+
+		
 		function menu(){
 			let MenuBox = document.getElementById("menu__box");
 			let MenuBtnCenter =	document.querySelector(".menu__btn > #center");
@@ -64,6 +64,69 @@ var x = 1;
 			MenuBtnAfter.style = "margin-bottom: 18px; transform: rotate(0);";
      }
 		}
+
+		
+		document.addEventListener('touchstart', handleTouchStart, false);
+		document.addEventListener('touchmove', handleTouchMove, false);
+
+		let x1 = null;
+		let y1 = null;
+
+		function handleTouchStart(event) {
+			const firstTouch = event.touches[0];
+			x1 = firstTouch.clientX;
+			y1 = firstTouch.clientY;
+		}
+
+		function handleTouchMove(event){
+			if(!x1 || !y1){
+				return false;
+			}
+			let x2 = event.touches[0].clientX;
+			let y2 = event.touches[0].clientY;
+
+			let xDiff = x2 - x1;
+			let yDiff = y2 - y1;
+
+			if (Math.abs(xDiff) > Math.abs(yDiff)){
+				console.log(Math.abs(xDiff));
+				if (xDiff < 0) menu(); 
+			}
+			x1 = null;
+			y1 = null;
+		}
+	
+		var firstScrooll = 1;
+
+		window.addEventListener('scroll', () => {
+			if( x % 2 !== 0){
+				const headerHide = document.querySelector('.header_visible');
+		const defaultOffset = 200;
+		const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+		const conainHide = () => headerHide.classList.contains('hide');
+			if (!conainHide()){
+				++firstScrooll;
+			}
+		
+				
+			if(scrollPosition() - firstScrooll  >= 0 && !conainHide()) {
+				//croll down
+				headerHide.classList.add('hide');	
+				// console.log(firstScrooll);	
+			}
+			else if(scrollPosition() - firstScrooll  <= 0 && conainHide()) {
+				//croll up
+				headerHide.classList.remove('hide');
+				--firstScrooll;
+				// console.log(firstScrooll);
+				
+				
+			}
+
+			}
+		
+		
+		})
 
 // desktop and mobyle menu hiding______________________________________________________
 

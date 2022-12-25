@@ -4,16 +4,7 @@ function uncheckAllRadio(radio){
   obj[i].checked = false;
  };
 
- let store1 = 'color: rgb(219, 219, 219);';
- let store2 = 'color: black;';
-
-function stoeWrite(){
-	localStorage.setItem('stor2', store1);
-};
-
-function stoeWrite2(){
-	localStorage.setItem('stor2', store2);
-};
+ 
 
  
 	 
@@ -44,14 +35,14 @@ function stoeWrite2(){
 
 function stopHover(){
 	var units = document.querySelectorAll('.unit');
-		if (localStorage.getItem('stor') == '1'){
+		if (localStorage.getItem('stor') == '1' && !document.hidden){
 			units.forEach((unit) => {
 				unit.classList.remove('unitHover1','unitHover2');
 				unit.classList.add('unitHover2');
 				
 				// console.log(localStorage.getItem('stor'));
 			});
-		} else if(localStorage.getItem('stor') == '2'){
+		} else if(localStorage.getItem('stor') == '2' && !document.hidden){
 			units.forEach((unit) => {
 				unit.classList.remove('unitHover1','unitHover2');
 				unit.classList.add('unitHover1');
@@ -73,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	stopHover();
 });
 
+const Hover = document.querySelector('.unit');
+const containHover = () => Hover.classList.contains('unitHover2');
+document.addEventListener("visibilitychange", function(){
+	if (!document.hidden && containHover()){
+		localStorage.setItem('stor', 1);
+	} else {
+		localStorage.setItem('stor', 2);    
+	}
+});
 
 
 
