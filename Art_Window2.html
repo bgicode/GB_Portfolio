@@ -4,52 +4,41 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="frames.css" >
 <title>окно1</title>
 </head>
-
 <body class="bodyIframe bodyArt">	
 	<div id="title"><span>ПОРТФОЛИО > АРТ ДИЗАЙН</span></div>
-	<div  id="cont_units">
-
-		<input class="radio" id="radio-1" type="radio" name="radio" value="0">
-		<label class="unit unitHover1 unitArt" for="radio-1" style="background-image: url(img/эх_не_умрёт_метал_СР.jpg);">
-			<div class="cleaner_X">
-				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
-			</div>				
-			<img src="img/эх_не_умрёт_метал_БОЛ.jpg" alt="эх_не_умрёт_метал">
-		</label>
-	
-	
-		<input class="radio" id="radio-2" type="radio" name="radio" value="1">
-		<label class="unit unitHover1 unitArt " for="radio-2" style="background-image: url(img/демон_СР.jpg);">
-			<div class="cleaner_X">
-				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
-			</div>				
-			<img src="img/демон_бол.jpg" alt="">
-		</label>
-
-			
-		<input class="radio" id="radio-3" type="radio" name="radio" value="2">
-		<label class="unit unitHover1 unitArt " for="radio-3" style="background-image: url(img/весёлый_шарик_БОЛ.jpg);">
-			<div class="cleaner_X">
-				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
-			</div>				
-			<img src="img/весёлый_шарик_СР.jpg" alt="">
-		</label>
-
-		<input class="radio" id="radio-4" type="radio" name="radio" value="2">
-		<label class="unit unitHover1 unitArt " for="radio-4" style="background-image: url(img/Вода_БОЛ.jpg);">
-			<div class="cleaner_X">
-				<input class="clener" type="button" value="Clear" onClick="uncheckAllRadio('radio')"/>
-			</div>				
-			<img src="img/Вода_БОЛ.jpg" alt="">
-		</label>		
+	<div  id="cont_units">		 
+		<div class="unit unitHover1 unitArt"   style="background-image: url(img/эх_не_умрёт_метал_СР.jpg);">			 				
+			<img class="unit_pic" src="img/эх_не_умрёт_метал_БОЛ.jpg" alt="эх_не_умрёт_метал">
+		</div>		 
+		<div class="unit unitHover1 unitArt "   style="background-image: url(img/демон_СР.jpg);">			 				
+			<img class="unit_pic" src="img/демон_бол.jpg" alt="демон">
+		</div>		 
+		<div class="unit unitHover1 unitArt "   style="background-image: url(img/весёлый_шарик_БОЛ.jpg);">			 				
+			<img class="unit_pic" src="img/весёлый_шарик_СР.jpg" alt="есёлый_шарик">
+		</div>		 
+		<div class="unit unitHover1 unitArt "   style="background-image: url(img/Вода_БОЛ.jpg);">			 				
+			<img class="unit_pic" src="img/Вода_БОЛ.jpg" alt="Вода">
+		</div>		
 	</div>
-	<script src="./iframeResizer.contentWindow.min.js">
-		//решение найденное в интернете позволяющий высоту iframe динамичной
-	</script> 
+
+	<div class="slider slider_hight">
+		<button class="slider_btn slider_btn_left">
+			<img class="slider_btn_img" src="img/left.svg" alt="left">
+		</button>
+		<div class="slider_container">			
+		</div>
+	</button>
+	<button class="slider_btn slider_btn_right">
+		<img class="slider_btn_img" src="img/right.svg" alt="right">
+	</button>	
+		<button class="slider_close"></button>
+	</div>
+
+	<script src="./iframeResizer.contentWindow.min.js"></script> 
 	<script src="./openIMG.js" type="text/javascript"></script>
 </body>
 </html>
