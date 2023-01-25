@@ -25,7 +25,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'desimo123@mail.ru'; // Логин на почте
-    $mail->Password   = 'Hi7t9u1EjjXipb05dRtV'; // Пароль на почте
+    $mail->Password   = '#'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('desimo123@mail.ru', 'Имяотправителя'); // Адрес самой почты и имя отправителя

@@ -6,6 +6,10 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html {
+	background-color: black;
+}
+
 /* iframe wrapres_____________________________________________________________ */
 
 .bodyIframe {
@@ -24,6 +28,7 @@
 	color: rgb(219, 219, 219);
 	font-family: "DINPro";
 }
+
 
 .body3D{	
 	max-height: 800px;
