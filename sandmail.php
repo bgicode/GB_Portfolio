@@ -22,25 +22,25 @@ try {
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'desimo123@mail.ru'; // Логин на почте
-    $mail->Password   = '#'; // Пароль на почте
+    
+    $mail->Host       = 'smtp.mail.ru'; 
+    $mail->Username   = 'desimo123@mail.ru'; 
+    $mail->Password   = '#'; 
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('desimo123@mail.ru', 'Имяотправителя'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('desimo123@mail.ru', 'Имяотправителя'); 
 
-    // Получатель письма
+   
     $mail->addAddress('bgdesigner@yandex.ru');  
     
 
     
-// Отправка сообщения
+
 $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;    
 
-// Проверяем отравленность сообщения
+
 if ($mail->send()) {$result = "Сообщение отправлено";} 
 else {$result = "error";}
 
@@ -49,7 +49,7 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-// Отображение результата
+
 echo "<!DOCTYPE html>
 <html lang='en'>
 <head>
